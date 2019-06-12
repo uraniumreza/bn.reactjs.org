@@ -1,17 +1,17 @@
 ---
 id: hooks-intro
-title: Introducing Hooks
+title: Hooks পরিচিতি
 permalink: docs/hooks-intro.html
 next: hooks-overview.html
 ---
 
-*Hooks* are a new addition in React 16.8. They let you use state and other React features without writing a class.
+*Hooks* হলো React 16.8 এর একটি নতুন সংযোজন। এর মাধ্যমে আপনি React এর state ও অন্যন্য ফিচারগুলো কোন প্রকার ক্লাস তৈরি না করেও ব্যবহার করতে পারবেন।
 
 ```js{4,5}
 import React, { useState } from 'react';
 
 function Example() {
-  // Declare a new state variable, which we'll call "count"
+  // এখানে আমরা একটি নতুন state ভ্যারিয়েবল ডিক্লেয়ার করলাম, যার নাম দিলাম "count"
   const [count, setCount] = useState(0);
 
   return (
@@ -25,31 +25,31 @@ function Example() {
 }
 ```
 
-This new function `useState` is the first "Hook" we'll learn about, but this example is just a teaser. Don't worry if it doesn't make sense yet!
+আমরা শুরুতে এই `useState` ফাংশনটি দেখবো, যা হবে আমাদের শেখা প্রথম কোন "Hook", কিন্তু এই উদাহরণটি হলো "Hook" শেখার প্রথম ধাপ। সুতরাং, এটি যদি আপনার বুঝতে সমস্যা হয়ে থাকে, ঘাবড়ানোর কিছু নেই!
 
-**You can start learning Hooks [on the next page](/docs/hooks-overview.html).** On this page, we'll continue by explaining why we're adding Hooks to React and how they can help you write great applications.
+**আপনি [পরের পৃষ্ঠা](/docs/hooks-overview.html) থেকে Hooks শেখা শুরু করতে পারেন।** এই পৃষ্ঠায়, আমরা কেন React এ Hooks সংযোজন করেছি তা নিয়ে আলোচনা করবো এবং কিভাবে Hooks ব্যবহার করে আপনি অসাধারণ এপ্লিকেশন তৈরি করতে পারবেন তা তুলে ধরা হবে।
 
->Note
+>বিঃদ্রঃ
 >
->React 16.8.0 is the first release to support Hooks. When upgrading, don't forget to update all packages, including React DOM. React Native will support Hooks in the next stable release.
+>React 16.8.0 হল প্রথম কোন ভার্সন যেখানে Hooks এর সাপোর্ট রয়েছে। প্রজেক্ট আপগ্রেড করবার সময় খেয়াল রাখবেন যেনো React DOM সহ সব প্যাকেজ আপডেট করছেন। এছাড়া React Native এর পরের স্থায়ী ভার্সন থেকে Hooks সংযুক্ত করা হবে।
 
-## Video Introduction {#video-introduction}
+## ভিডিও উপস্থাপনা {#video-introduction}
 
-At React Conf 2018, Sophie Alpert and Dan Abramov introduced Hooks, followed by Ryan Florence demonstrating how to refactor an application to use them. Watch the video here:
+React Conf 2018 তে, Sophie Alpert ও Dan Abramov `Hooks` এর পরিচয় প্রদান করেন। তারপরে, Ryan Florence দেখান কিভাবে করে ইতিমধ্যে বিদ্যমান প্রজেক্ট গুলোর কোড রিফ্যাক্টর করে Hooks ব্যবহার করতে হবে। ভিডিওটি দেখুন এখানে:
 
 <br>
 
 <iframe width="650" height="366" src="//www.youtube.com/embed/dpw9EHDh2bM" frameborder="0" allowfullscreen></iframe>
 
-## No Breaking Changes {#no-breaking-changes}
+## কোন Breaking Changes নেই {#no-breaking-changes}
 
-Before we continue, note that Hooks are:
+শুরু করার পূর্বে জেনে রাখা দরকার যে, Hooks হলো:
 
-* **Completely opt-in.** You can try Hooks in a few components without rewriting any existing code. But you don't have to learn or use Hooks right now if you don't want to.
-* **100% backwards-compatible.** Hooks don't contain any breaking changes.
-* **Available now.** Hooks are now available with the release of v16.8.0.
+* **সম্পূর্ণ স্বাধীন।** আপনি চাইলে পৃথক কিছু components এ Hooks ব্যবহার করতে পারেন, এর জন্যে আপনাকে ইতিমধ্যে বিদ্যমান কোডের মধ্যে কোন প্রকার পরিবর্তন আনতে হবেনা।
+* **১০০% backwards-compatible।** Hooks এর মধ্যে কোন breaking changes নেই।
+* **এখন থেকে ব্যবহারযোগ্য।** Hooks 16.8.0 ভার্সন থেকেই ব্যবহারযোগ্য।
 
-**There are no plans to remove classes from React.** You can read more about the gradual adoption strategy for Hooks in the [bottom section](#gradual-adoption-strategy) of this page.
+**React থেকে class এর ব্যবহার সরিয়ে ফেলার কোন পরিকল্পনা নেই।** Hooks এর ক্রমবর্ধমান গ্রহণযোগ্যতা প্রতিষ্ঠার পরিকল্পনা সম্পর্কে এই পৃষ্ঠার [নিচে থেকে](#gradual-adoption-strategy) পড়ে আরও বেশি জানতে পারবেনা।
 
 **Hooks don't replace your knowledge of React concepts.** Instead, Hooks provide a more direct API to the React concepts you already know: props, state, context, refs, and lifecycle. As we will show later, Hooks also offer a new powerful way to combine them.
 
